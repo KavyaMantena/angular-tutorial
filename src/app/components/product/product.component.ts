@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProductComponent {
   @Input() product!: Product;
-  @Output() productOutput: EventEmitter<Product> = new EventEmitter<Product>();
+  @Output() productOutput = new EventEmitter<Product>();
 
   ngOnInit() {
     this.productOutput.emit(this.product);
