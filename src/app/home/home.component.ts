@@ -4,6 +4,7 @@ import { Product, Products } from '../../types';
 import { ProductComponent } from '../components/product/product.component';
 import { ProductsService } from '../services/products.service';
 import { PaginatorModule } from 'primeng/paginator';
+import { Xliff } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -35,6 +36,18 @@ export class HomeComponent {
         this.products = products.items;
         this.totalRecords = products.total;
       });
+  }
+
+  editProduct(product: Product) {
+    console.log(product, 'Edit');
+  }
+
+  deleteProduct(product: Product) {
+    console.log(product, 'delete');
+  }
+
+  addProduct(product: Product) {
+    console.log(product, 'Add');
   }
 
   ngOnInit() {
